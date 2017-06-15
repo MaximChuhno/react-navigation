@@ -203,7 +203,7 @@ class CardStack extends Component {
       toValue: resetToIndex,
       duration,
       easing: Easing.linear(),
-      useNativeDriver: this.props.position.__isNative,
+      useNativeDriver: true,
     }).start();
   }
 
@@ -219,7 +219,7 @@ class CardStack extends Component {
       toValue,
       duration,
       easing: Easing.linear(),
-      useNativeDriver: position.__isNative,
+      useNativeDriver: true,
     }).start(() => {
       this._immediateIndex = null;
       const backFromScene = scenes.find((s: *) => s.index === toValue + 1);
